@@ -1,0 +1,23 @@
+{
+    "name": "redbaron76/googlavel",
+    "description": "",
+    "authors": [
+        {
+            "name": "Fabio Fumis",
+            "email": "f.fumis@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Redbaron76\\Googlavel\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
