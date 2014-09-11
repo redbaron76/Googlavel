@@ -1,6 +1,10 @@
 {
     "name": "redbaron76/googlavel",
-    "description": "",
+    "description": "a Google API v3 wrapper for Laravel 4.x",
+    "homepage": "https://github.com/redbaron76/googlavel",
+    "keywords": ["laravel", "google", "api", "v3", "laravel4", "googleAPI"],
+    "time": "2014-09-11",
+    "license": "MIT",
     "authors": [
         {
             "name": "Fabio Fumis",
@@ -8,16 +12,13 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0",
-        "illuminate/support": "4.2.*"
+        "php": ">=5.4",
+        "illuminate/support": "~4.1",
+        "google/apiclient": "1.0.*@dev"
     },
     "autoload": {
-        "classmap": [
-            "src/migrations"
-        ],
         "psr-0": {
-            "Redbaron76\\Googlavel\\": "src/"
+            "Redbaron76\\Googlavel": "src/"
         }
-    },
-    "minimum-stability": "stable"
+    }
 }
