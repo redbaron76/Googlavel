@@ -3,8 +3,6 @@
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
 
-use Redbaron76\Googlavel\Classes\Googlavel;
-
 class GooglavelServiceProvider extends ServiceProvider {
 
 	/**
@@ -12,7 +10,14 @@ class GooglavelServiceProvider extends ServiceProvider {
 	 *
 	 * @var bool
 	 */
-	protected $defer = true;
+	protected $defer = false;
+
+	/**
+	 * Get an instance of AliasLoader
+	 * 
+	 * @return instance
+	 */
+	protected $aliasLoader;
 
 	/**
 	 * Bootstrap the application events.
@@ -23,11 +28,13 @@ class GooglavelServiceProvider extends ServiceProvider {
 	{
 		$this->package('redbaron76/googlavel');
 
-		// Load facade alias
-		AliasLoader::getInstance()->alias(
-			'Googlavel',
-			'Redbaron76\Googlavel\Support\Facades\Googlavel'
-		);		
+		// Facade alias
+		$this->aliasLoader = AliasLoader::getInstance();
+
+		$this->app->booting(function()
+		{
+			$this->aliasLoader->alias('Googlavel', 'Redbaron76\Googlavel\Support\Facades\Googlavel');
+		});
 	}
 
 	/**
@@ -40,7 +47,7 @@ class GooglavelServiceProvider extends ServiceProvider {
 		// Register the GoogleAPI class
 		$this->app['Googlavel'] = $this->app->share(function($app)
 		{
-			return new Googlavel($app['session.store'], $app['config'], $app['redirect']);
+			return new Classes\Googlavel($app['session.store'], $app['config'], $app['redirect']);
 		});
 	}
 
