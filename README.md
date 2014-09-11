@@ -47,7 +47,7 @@ Set the `GooglavelServiceProvider` reference in your `/app/config/app.php` like 
 
 Before using this package, you will need to activate a profile from Google developer and get your personal code from the [Google Developers Console](https://console.developers.google.com/) in order to obtain access and use their services through API calls.
 
-![Google Developers Console](https://cloud.githubusercontent.com/assets/1061849/4231489/b1e7803a-3991-11e4-8cc0-125e34300232.jpg)
+![Google Developers Console](https://cloud.githubusercontent.com/assets/1061849/4231642/b444bf26-3993-11e4-8230-db84b4008496.jpg)
 
 Once obtained `Client ID` and `Client Secret` strings for web application from the Google Developers Console and set a valid `Redirect URI` callback, export the package config file:
 
