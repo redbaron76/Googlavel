@@ -3,6 +3,8 @@
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
 
+use Redbaron76\Googlavel\Classes\Googlavel;
+
 class GooglavelServiceProvider extends ServiceProvider {
 
 	/**
@@ -38,7 +40,7 @@ class GooglavelServiceProvider extends ServiceProvider {
 		// Register the GoogleAPI class
 		$this->app['Googlavel'] = $this->app->share(function($app)
 		{
-			return new Classes\Googlavel($app['session.store'], $app['config'], $app['redirect']);
+			return new Googlavel($app['session.store'], $app['config'], $app['redirect']);
 		});
 	}
 
