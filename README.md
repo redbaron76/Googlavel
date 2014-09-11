@@ -64,7 +64,7 @@ return array(
     // OAuth2 Setting, you can get these keys in Google Developers Console
     'oauth2_client_id'      => '< YOUR CLIENT ID >',
     'oauth2_client_secret'  => '< YOUR CLIENT SECRET >',
-    'oauth2_redirect_uri'   => 'http://localhost:8000/',   // Change it according to your needs
+    'oauth2_redirect_uri'   => 'http://localhost:8081/',   // Change it according to your needs
 
     ...
   );
